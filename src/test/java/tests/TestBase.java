@@ -23,7 +23,6 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = "https://www.bookedby.com";
         Configuration.browser = System.getProperty("browser_name", "chrome");
-        Configuration.browserVersion = System.getProperty("browser_version", "105.0");
         Configuration.browserSize = System.getProperty("browser_size", "1920x2000");
     }
 
