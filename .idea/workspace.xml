@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f3ada63-3495-4788-bfcc-a74d41ce817c" name="Changes" comment="add tests">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookedby/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MainTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MainTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +85,29 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.MainTests">
+    <configuration name="MainTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":all_test" />
+            <option value="--tests" />
+            <option value="&quot;tests.MainTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="MainTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -152,7 +175,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainTests.checkSubmitIsNotAvailableWithoutPhoneOnDemoFormTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MainTests.checkTitleMenuTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -163,9 +186,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":all_test" />
+            <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.MainTests.checkSubmitIsNotAvailableWithoutPhoneOnDemoFormTest&quot;" />
+            <option value="&quot;tests.MainTests.checkTitleMenuTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -175,41 +198,20 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="bookedbyTests [allureServe]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="allureServe" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <list>
+      <item itemvalue="Gradle.MainTests (1)" />
       <item itemvalue="Gradle.MainTests.checkSubmitIsNotAvailableWithoutNameOnDemoFormTest" />
-      <item itemvalue="Gradle.bookedbyTests [allureServe]" />
+      <item itemvalue="Gradle.MainTests.checkTitleMenuTest" />
       <item itemvalue="Gradle.MainTests.checkGetADemoFormIsOpenedTest" />
-      <item itemvalue="Gradle.MainTests.checkSubmitIsNotAvailableWithoutPhoneOnDemoFormTest" />
       <item itemvalue="Gradle.MainTests" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.MainTests" />
         <item itemvalue="Gradle.MainTests.checkSubmitIsNotAvailableWithoutNameOnDemoFormTest" />
+        <item itemvalue="Gradle.MainTests.checkTitleMenuTest" />
+        <item itemvalue="Gradle.MainTests (1)" />
         <item itemvalue="Gradle.MainTests.checkGetADemoFormIsOpenedTest" />
-        <item itemvalue="Gradle.bookedbyTests [allureServe]" />
-        <item itemvalue="Gradle.MainTests.checkSubmitIsNotAvailableWithoutPhoneOnDemoFormTest" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664650225145</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add tests">
+      <created>1664650649083</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664650649083</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
