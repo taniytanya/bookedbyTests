@@ -151,12 +151,11 @@ public class MainTests {
     public void checkGetADemoFormIsOpenedTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        step("Open main page", () -> {
-
-            open("https://www.bookedby.com");
+        step("Open features page", () -> {
+            open("https://www.bookedby.com/features");
         });
-        step("Click button 'get a demo'", () -> {
-            $(".t228__right_buttons_but .t-btn").click();
+        step("Click button 'schedule a demo'", () -> {
+            $(byXpath("//*[@data-elem-id=\"1562685805088\"]//*[@class=\"tn-atom\"]")).click();
         });
         step("Check form is opened", () -> {
             $("#rec130869567 .t702__title").shouldHave(text("Get a Demo"));
@@ -175,12 +174,11 @@ public class MainTests {
     public void checkSubmitIsNotAvailableWithoutALLRequiredFieldsOnDemoFormTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        step("Open main page", () -> {
-
-            open("https://www.bookedby.com");
+        step("Open features page", () -> {
+            open("https://www.bookedby.com/features");
         });
-        step("Click button 'get a demo'", () -> {
-            $(".t228__right_buttons_but .t-btn").click();
+        step("Click button 'schedule a demo'", () -> {
+            $(byXpath("//*[@data-elem-id=\"1562685805088\"]//*[@class=\"tn-atom\"]")).click();
         });
         step("Click submit", () -> {
             $("#rec130869567 .t-form__submit").click();
@@ -200,11 +198,11 @@ public class MainTests {
     public void checkSubmitIsNotAvailableWithoutPhoneOnDemoFormTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        step("Open main page", () -> {
-            open("https://www.bookedby.com");
+        step("Open features page", () -> {
+            open("https://www.bookedby.com/features");
         });
-        step("Click button 'get a demo'", () -> {
-            $(".t228__right_buttons_but .t-btn").click();
+        step("Click button 'schedule a demo'", () -> {
+            $(byXpath("//*[@data-elem-id=\"1562685805088\"]//*[@class=\"tn-atom\"]")).click();
         });
         step("input name on 'get a demo'", () -> {
             $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Name\"]")).setValue("Rick Morty");
@@ -219,7 +217,7 @@ public class MainTests {
             $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Input\"]")).setValue("10 times ago");
         });
         step("Click submit", () -> {
-            $("#rec130869567 .t-form__submi").click();
+            $("#rec130869567 .t-form__submit").click();
         });
         step("Check error message", () -> {
             $("#rec130869567 .t-form__errorbox-middle").isDisplayed();
@@ -236,11 +234,11 @@ public class MainTests {
     public void checkSubmitIsNotAvailableWithoutNameOnDemoFormTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        step("Open main page", () -> {
-            open("https://www.bookedby.com");
+        step("Open features page", () -> {
+            open("https://www.bookedby.com/features");
         });
-        step("Click button 'get a demo'", () -> {
-            $(".t228__right_buttons_but .t-btn").click();
+        step("Click button 'schedule a demo'", () -> {
+            $(byXpath("//*[@data-elem-id=\"1562685805088\"]//*[@class=\"tn-atom\"]")).click();
         });
         step("input Phone on 'get a demo'", () -> {
             $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Phone\"]")).setValue("1234567890");
@@ -272,11 +270,11 @@ public class MainTests {
     public void checkSubmitIsNotAvailableWithoutEmailOnDemoFormTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        step("Open main page", () -> {
-            open("https://www.bookedby.com");
+        step("Open features page", () -> {
+            open("https://www.bookedby.com/features");
         });
-        step(".t228__right_buttons_but .t-btn", () -> {
-            $(".t228__right_buttons_but").click();
+        step("Click button 'schedule a demo'", () -> {
+            $(byXpath("//*[@data-elem-id=\"1562685805088\"]//*[@class=\"tn-atom\"]")).click();
         });
         step("input name on 'get a demo'", () -> {
             $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Name\"]")).setValue("Rick Morty");
@@ -308,11 +306,11 @@ public class MainTests {
     public void checkSubmitIsNotAvailableWithIncorrectEmailTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        step("Open main page", () -> {
-            open("https://www.bookedby.com");
+        step("Open features page", () -> {
+            open("https://www.bookedby.com/features");
         });
-        step(".t228__right_buttons_but .t-btn", () -> {
-            $(".t228__right_buttons_but").click();
+        step("Click button 'schedule a demo'", () -> {
+            $(byXpath("//*[@data-elem-id=\"1562685805088\"]//*[@class=\"tn-atom\"]")).click();
         });
         step("input name on 'get a demo'", () -> {
             $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Name\"]")).setValue("Rick Morty");
