@@ -1,6 +1,7 @@
 package tests;
 
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -8,13 +9,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import pages.FormPage;
 
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.url;
 import static io.qameta.allure.Allure.step;
-import static org.openqa.selenium.devtools.v85.debugger.Debugger.pause;
 
 
 public class MainTests {
@@ -40,9 +41,9 @@ public class MainTests {
             open("https://www.bookedby.com");
         });
         step("Check information", () -> {
-            $(".t396__elem .tn-atom").shouldHave(text("Book services"));
-            $(".t396__elem .tn-atom").shouldHave(text("from anywhere"));
-            $(".t059__text-impact").shouldHave(text("Information from BookedBy regarding Coronavirus (COVID-19)"));
+            $(FormPage.TITLE_INFO).shouldHave(text("Book services"));
+            $(FormPage.TITLE_INFO).shouldHave(text("from anywhere"));
+            $(FormPage.COVID_INFO).shouldHave(text("Information from BookedBy regarding Coronavirus (COVID-19)"));
         });
 
     }
@@ -71,12 +72,12 @@ public class MainTests {
             webdriver().shouldHave(url("https://www.bookedby.com/features"));
         });
         step("Check filter fields", () -> {
-            $("#rec130438009.r.t-rec.r_showed.r_anim").shouldHave(text("Salons"));
-            $("#rec130438009.r.t-rec.r_showed.r_anim").shouldHave(text("Cell Phones"));
-            $("#rec130438009.r.t-rec.r_showed.r_anim").shouldHave(text("Spas"));
-            $("#rec130438009.r.t-rec.r_showed.r_anim").shouldHave(text("Vets"));
-            $("#rec130438009.r.t-rec.r_showed.r_anim").shouldHave(text("Psychologist"));
-            $("#rec130438009.r.t-rec.r_showed.r_anim").shouldHave(text("Dentist"));
+            $(FormPage.FILTER_FIELDS).shouldHave(text("Salons"));
+            $(FormPage.FILTER_FIELDS).shouldHave(text("Cell Phones"));
+            $(FormPage.FILTER_FIELDS).shouldHave(text("Spas"));
+            $(FormPage.FILTER_FIELDS).shouldHave(text("Vets"));
+            $(FormPage.FILTER_FIELDS).shouldHave(text("Psychologist"));
+            $(FormPage.FILTER_FIELDS).shouldHave(text("Dentist"));
 
         });
     }
@@ -104,10 +105,10 @@ public class MainTests {
             webdriver().shouldHave(url("https://www.bookedby.com/features-cellphones"));
         });
         step("Check filter fields", () -> {
-            $("#allrecords").shouldHave(text("Inventory Management"));
-            $("#allrecords").shouldHave(text("Security"));
-            $("#allrecords").shouldHave(text("Sales / POS"));
-            $("#allrecords").shouldHave(text("Email Marketing"));
+            $(FormPage.ALLRECORDS).shouldHave(text("Inventory Management"));
+            $(FormPage.ALLRECORDS).shouldHave(text("Security"));
+            $(FormPage.ALLRECORDS).shouldHave(text("Sales / POS"));
+            $(FormPage.ALLRECORDS).shouldHave(text("Email Marketing"));
 
         });
     }
@@ -129,16 +130,16 @@ public class MainTests {
             open("https://www.bookedby.com/features");
         });
         step("Open Psychologist features", () -> {
-            $(".tn-elem__1304380091569901594620").click();
+            $(FormPage.PSYCHOLOGIST).click();
         });
         step("Page with Psychologist features is opened", () -> {
             webdriver().shouldHave(url("https://www.bookedby.com/features-psychologist"));
         });
         step("Check filter fields", () -> {
-            $("#allrecords").shouldNotHave(text("Inventory Management"));
-            $("#allrecords").shouldHave(text("Security"));
-            $("#allrecords").shouldHave(text("Sales / POS"));
-            $("#allrecords").shouldHave(text("Email Marketing"));
+            $(FormPage.ALLRECORDS).shouldNotHave(text("Inventory Management"));
+            $(FormPage.ALLRECORDS).shouldHave(text("Security"));
+            $(FormPage.ALLRECORDS).shouldHave(text("Sales / POS"));
+            $(FormPage.ALLRECORDS).shouldHave(text("Email Marketing"));
 
 
         });
@@ -159,14 +160,15 @@ public class MainTests {
             open("https://www.bookedby.com/features");
         });
 
-        sleep(3000);
+        $(byXpath(FormPage.BUTTON_DEMO)).
+                shouldBe(Condition.and("clickable", visible, enabled));
 
         step("Click button 'schedule a demo'", () -> {
-            $(byXpath("//*[@data-elem-id=\"1562685805088\"]//*[@class=\"tn-atom\"]")).click();
+            $(byXpath(FormPage.BUTTON_DEMO)).click();
         });
         step("Check form is opened", () -> {
-            $("#rec130869567 .t702__title").shouldHave(text("Get a Demo"));
-            $("#rec130869567 .t702__descr").shouldHave(text("Get to know our software"));
+            $(FormPage.DEMO_TITLE).shouldHave(text("Get a Demo"));
+            $(FormPage.DEMO_TEXT).shouldHave(text("Get to know our software"));
         });
     }
 
@@ -184,14 +186,18 @@ public class MainTests {
         step("Open features page", () -> {
             open("https://www.bookedby.com/features");
         });
+
+        $(byXpath(FormPage.BUTTON_DEMO)).
+                shouldBe(Condition.and("clickable", visible, enabled));
+
         step("Click button 'schedule a demo'", () -> {
-            $(byXpath("//*[@data-elem-id=\"1562685805088\"]//*[@class=\"tn-atom\"]")).click();
+            $(byXpath(FormPage.BUTTON_DEMO)).click();
         });
         step("Click submit", () -> {
-            $("#rec130869567 .t-form__submit").click();
+            $(FormPage.SUBMIT).click();
         });
         step("Check error message", () -> {
-            $("#rec130869567 .t-form__errorbox-middle").isDisplayed();
+            $(FormPage.ERROR).isDisplayed();
         });
     }
 
@@ -209,25 +215,25 @@ public class MainTests {
             open("https://www.bookedby.com/features");
         });
         step("Click button 'schedule a demo'", () -> {
-            $(byXpath("//*[@data-elem-id=\"1562685805088\"]//*[@class=\"tn-atom\"]")).click();
+            $(byXpath(FormPage.BUTTON_DEMO)).click();
         });
         step("input name on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Name\"]")).setValue("Rick Morty");
+            $(byXpath(FormPage.FORM_NAME_FIELD)).setValue("Rick Morty");
         });
         step("input email on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Email\"]")).setValue("RickMorty10987443@mail.com");
+            $(byXpath(FormPage.FORM_EMAIL_FIELD)).setValue("RickMorty10987443@mail.com");
         });
         step("input business name on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Salon Name\"]")).setValue("RickMorty10987443@mail.com");
+            $(byXpath(FormPage.FORM_SALON_NAME_FIELD)).setValue("RickMorty10987443@mail.com");
         });
         step("input current software on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Input\"]")).setValue("10 times ago");
+            $(byXpath(FormPage.FORM_INPUT_FIELD)).setValue("10 times ago");
         });
         step("Click submit", () -> {
-            $("#rec130869567 .t-form__submit").click();
+            $(FormPage.SUBMIT).click();
         });
         step("Check error message", () -> {
-            $("#rec130869567 .t-form__errorbox-middle").isDisplayed();
+            $(FormPage.ERROR).isDisplayed();
         });
     }
 
@@ -245,25 +251,25 @@ public class MainTests {
             open("https://www.bookedby.com/features");
         });
         step("Click button 'schedule a demo'", () -> {
-            $(byXpath("//*[@data-elem-id=\"1562685805088\"]//*[@class=\"tn-atom\"]")).click();
+            $(byXpath(FormPage.BUTTON_DEMO)).click();
         });
         step("input Phone on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Phone\"]")).setValue("1234567890");
+            $(byXpath(FormPage.FORM_PHONE_FIELD)).setValue("1234567890");
         });
         step("input name on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Email\"]")).setValue("RickMorty10987443@mail.com");
+            $(byXpath(FormPage.FORM_EMAIL_FIELD)).setValue("RickMorty10987443@mail.com");
         });
         step("input business name on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Salon Name\"]")).setValue("RickHair");
+            $(byXpath(FormPage.FORM_SALON_NAME_FIELD)).setValue("RickHair");
         });
         step("input current software on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Input\"]")).setValue("10 times ago");
+            $(byXpath(FormPage.FORM_INPUT_FIELD)).setValue("10 times ago");
         });
         step("Click submit", () -> {
-            $("#rec130869567 .t-form__submit").click();
+            $(FormPage.SUBMIT).click();
         });
         step("Check error message", () -> {
-            $("#rec130869567 .t-form__errorbox-middle").isDisplayed();
+            $(FormPage.ERROR).isDisplayed();
         });
     }
 
@@ -281,25 +287,29 @@ public class MainTests {
             open("https://www.bookedby.com/features");
         });
         step("Click button 'schedule a demo'", () -> {
-            $(byXpath("//*[@data-elem-id=\"1562685805088\"]//*[@class=\"tn-atom\"]")).click();
+            $(byXpath(FormPage.BUTTON_DEMO)).click();
         });
+
+        $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Name\"]")).
+                shouldBe(Condition.and("clickable", visible, enabled));
+
         step("input name on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Name\"]")).setValue("Rick Morty");
+            $(byXpath(FormPage.FORM_NAME_FIELD)).setValue("Rick Morty");
         });
         step("input Phone on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Phone\"]")).setValue("1234567890");
+            $(byXpath(FormPage.FORM_PHONE_FIELD)).setValue("1234567890");
         });
         step("input business name on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Salon Name\"]")).setValue("RickHair");
+            $(byXpath(FormPage.FORM_SALON_NAME_FIELD)).setValue("RickHair");
         });
         step("input current software on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Input\"]")).setValue("10 times ago");
+            $(byXpath(FormPage.FORM_INPUT_FIELD)).setValue("10 times ago");
         });
         step("Click submit", () -> {
-            $("#rec130869567 .t-form__submit").click();
+            $(FormPage.SUBMIT).click();
         });
         step("Check error message", () -> {
-            $("#rec130869567 .t-form__errorbox-middle").isDisplayed();
+            $(FormPage.ERROR).isDisplayed();
         });
     }
 
@@ -317,27 +327,31 @@ public class MainTests {
             open("https://www.bookedby.com/features");
         });
         step("Click button 'schedule a demo'", () -> {
-            $(byXpath("//*[@data-elem-id=\"1562685805088\"]//*[@class=\"tn-atom\"]")).click();
+            $(byXpath(FormPage.BUTTON_DEMO)).click();
         });
+
+        $(byXpath(FormPage.FORM_NAME_FIELD)).
+                shouldBe(Condition.and("clickable", visible, enabled));
+
         step("input name on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Name\"]")).setValue("Rick Morty");
+            $(byXpath(FormPage.FORM_NAME_FIELD)).setValue("Rick Morty");
         });
         step("input Phone on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Phone\"]")).setValue("1234567890");
+            $(byXpath(FormPage.FORM_PHONE_FIELD)).setValue("1234567890");
         });
         step("input business name on 'get a demo'", () -> {
-            $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Email\"]")).setValue("RickHair");
+            $(byXpath(FormPage.FORM_EMAIL_FIELD)).setValue("RickHair");
         });
         step("Click submit", () -> {
-            $("#rec130869567 .t-form__submit").click();
+            $(FormPage.SUBMIT).click();
         });
         step("Check error message", () -> {
-            $("#rec130869567 .t-form__errorbox-middle").isDisplayed();
+            $(FormPage.ERROR).isDisplayed();
         });
     }
 
     @AfterEach
-    public void afterEach(){
+    public void afterEach() {
         closeWebDriver();
     }
 

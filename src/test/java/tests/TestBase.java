@@ -7,8 +7,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import static com.codeborne.selenide.Selenide.closeWebDriver;
-
 
 public class TestBase {
 
@@ -17,8 +15,8 @@ public class TestBase {
     static void configure() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        if (System.getProperty("remote") != null) {
-            Configuration.remote = System.getProperty("remote");
+        if (System.getProperty("selenide_remote") != null) {
+            Configuration.remote = System.getProperty("selenide_remote");
         }
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
@@ -36,7 +34,5 @@ public class TestBase {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
-        closeWebDriver();
-        }
-
+    }
 }
