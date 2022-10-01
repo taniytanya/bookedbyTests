@@ -17,8 +17,8 @@ public class TestBase {
     static void configure() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        if (System.getProperty("selenide_remote") != null) {
-            Configuration.remote = System.getProperty("selenide_remote");
+        if (System.getProperty("remote") != null) {
+            Configuration.remote = System.getProperty("remote");
         }
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
