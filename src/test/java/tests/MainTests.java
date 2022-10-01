@@ -33,9 +33,6 @@ public class MainTests {
     @Tag("smoke")
     public void checkTitleTest() {
 
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
         step("Open main page", () -> {
 
             open("https://www.bookedby.com");
@@ -57,9 +54,6 @@ public class MainTests {
     @Tag("all")
     @Tag("smoke")
     public void featurePageIsOpenedTest() {
-
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Open main page", () -> {
 
@@ -92,8 +86,6 @@ public class MainTests {
     public void checkCellPhonesFeaturesTest() {
 
 
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
         step("Open features page", () -> {
 
             open("https://www.bookedby.com/features");
@@ -122,8 +114,6 @@ public class MainTests {
     @Tag("all")
     public void checkPsychologistFeaturesTest() {
 
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Open features page", () -> {
 
@@ -154,7 +144,7 @@ public class MainTests {
     @Tag("all")
     @Tag("smoke")
     public void checkGetADemoFormIsOpenedTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+
 
         step("Open features page", () -> {
             open("https://www.bookedby.com/features");
@@ -181,7 +171,6 @@ public class MainTests {
     @Tag("all")
     @Tag("smoke")
     public void checkSubmitIsNotAvailableWithoutALLRequiredFieldsOnDemoFormTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Open features page", () -> {
             open("https://www.bookedby.com/features");
@@ -209,7 +198,6 @@ public class MainTests {
     @Link(value = "Testing", url = "https://www.bookedby.com")
     @Tag("all")
     public void checkSubmitIsNotAvailableWithoutPhoneOnDemoFormTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Open features page", () -> {
             open("https://www.bookedby.com/features");
@@ -245,7 +233,6 @@ public class MainTests {
     @Link(value = "Testing", url = "https://www.bookedby.com")
     @Tag("all")
     public void checkSubmitIsNotAvailableWithoutNameOnDemoFormTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Open features page", () -> {
             open("https://www.bookedby.com/features");
@@ -281,7 +268,6 @@ public class MainTests {
     @Link(value = "Testing", url = "https://www.bookedby.com")
     @Tag("all")
     public void checkSubmitIsNotAvailableWithoutEmailOnDemoFormTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Open features page", () -> {
             open("https://www.bookedby.com/features");
@@ -321,7 +307,6 @@ public class MainTests {
     @Link(value = "Testing", url = "https://www.bookedby.com")
     @Tag("all")
     public void checkSubmitIsNotAvailableWithIncorrectEmailTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Open features page", () -> {
             open("https://www.bookedby.com/features");
