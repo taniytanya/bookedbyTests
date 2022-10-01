@@ -1,6 +1,6 @@
-package github;
+package tests;
 
-import com.codeborne.selenide.Condition;
+
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.url;
 import static io.qameta.allure.Allure.step;
-import static org.openqa.selenium.By.linkText;
+
 
 public class MainTests {
 
@@ -156,7 +156,7 @@ public class MainTests {
             open("https://www.bookedby.com");
         });
         step("Click button 'get a demo'", () -> {
-            $(".t228__right_buttons_but").click();
+            $(".t228__right_buttons_but .t-btn").click();
         });
         step("Check form is opened", () -> {
             $("#rec130869567 .t702__title").shouldHave(text("Get a Demo"));
@@ -180,7 +180,7 @@ public class MainTests {
             open("https://www.bookedby.com");
         });
         step("Click button 'get a demo'", () -> {
-            $(".t228__right_buttons_but").click();
+            $(".t228__right_buttons_but .t-btn").click();
         });
         step("Click submit", () -> {
             $("#rec130869567 .t-form__submit").click();
@@ -204,7 +204,7 @@ public class MainTests {
             open("https://www.bookedby.com");
         });
         step("Click button 'get a demo'", () -> {
-            $(".t228__right_buttons_but").click();
+            $(".t228__right_buttons_but .t-btn").click();
         });
         step("input name on 'get a demo'", () -> {
             $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Name\"]")).setValue("Rick Morty");
@@ -219,7 +219,7 @@ public class MainTests {
             $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Input\"]")).setValue("10 times ago");
         });
         step("Click submit", () -> {
-            $("#rec130869567 .t-form__submit").click();
+            $("#rec130869567 .t-form__submi").click();
         });
         step("Check error message", () -> {
             $("#rec130869567 .t-form__errorbox-middle").isDisplayed();
@@ -240,7 +240,7 @@ public class MainTests {
             open("https://www.bookedby.com");
         });
         step("Click button 'get a demo'", () -> {
-            $(".t228__right_buttons_but").click();
+            $(".t228__right_buttons_but .t-btn").click();
         });
         step("input Phone on 'get a demo'", () -> {
             $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Phone\"]")).setValue("1234567890");
@@ -275,7 +275,7 @@ public class MainTests {
         step("Open main page", () -> {
             open("https://www.bookedby.com");
         });
-        step("Click button 'get a demo'", () -> {
+        step(".t228__right_buttons_but .t-btn", () -> {
             $(".t228__right_buttons_but").click();
         });
         step("input name on 'get a demo'", () -> {
@@ -297,6 +297,7 @@ public class MainTests {
             $("#rec130869567 .t-form__errorbox-middle").isDisplayed();
         });
     }
+
     @Test
     @DisplayName("Submit isn't available with incorrect E-mail")
     @Owner("Tanya")
@@ -310,7 +311,7 @@ public class MainTests {
         step("Open main page", () -> {
             open("https://www.bookedby.com");
         });
-        step("Click button 'get a demo'", () -> {
+        step(".t228__right_buttons_but .t-btn", () -> {
             $(".t228__right_buttons_but").click();
         });
         step("input name on 'get a demo'", () -> {
