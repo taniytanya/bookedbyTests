@@ -12,7 +12,7 @@ public class FormPage {
     public static String buttonDemo = "//*[@data-elem-id=\"1562685805088\"]//*[@class=\"tn-atom\"]";
     public static String demoTitle = "#rec130869567 .t702__title";
     public static String demoText = "#rec130869567 .t702__descr";
-    public static String submit = "#rec130869567 .t-form__submit";
+    public static String submit = "#rec130869567 .t-form__submit .t-submit";
     public static String error = "#rec130869567 .t-form__errorbox-middle";
     public static String formEmailField = "//*[@id=\"form130869567\"]//*[@name=\"Email\"]";
     public static String formSalonNameField = "//*[@id=\"form130869567\"]//*[@name=\"Salon Name\"]";
