@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7f3ada63-3495-4788-bfcc-a74d41ce817c" name="Changes" comment="add stability">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bookedBy/pages/FormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bookedBy/pages/FormPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/bookedBy/tests/MainPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bookedBy/tests/MainPageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +110,7 @@
       <command value="gradle all_test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.MainPageTests.checkPsychologistFeaturesTest">
+  <component name="RunManager" selected="Gradle.MainPageTests.checkGetADemoFormIsOpenedTest">
     <configuration name="MainPageTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -133,7 +134,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainPageTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MainPageTests.checkGetADemoFormIsOpenedTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -146,7 +147,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.MainPageTests&quot;" />
+            <option value="&quot;bookedBy.tests.MainPageTests.checkGetADemoFormIsOpenedTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -245,19 +246,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.MainPageTests" />
       <item itemvalue="Gradle.MainPageTests (1)" />
+      <item itemvalue="Gradle.MainPageTests.checkGetADemoFormIsOpenedTest" />
       <item itemvalue="Gradle.MainPageTests.checkPsychologistFeaturesTest" />
       <item itemvalue="Gradle.MainPageTests.checkSubmitIsNotAvailableWithIncorrectEmailTest" />
       <item itemvalue="Gradle.bookedbyTests [allureServe]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MainPageTests.checkPsychologistFeaturesTest" />
+        <item itemvalue="Gradle.MainPageTests.checkGetADemoFormIsOpenedTest" />
         <item itemvalue="Gradle.MainPageTests (1)" />
+        <item itemvalue="Gradle.MainPageTests.checkPsychologistFeaturesTest" />
         <item itemvalue="Gradle.MainPageTests.checkSubmitIsNotAvailableWithIncorrectEmailTest" />
         <item itemvalue="Gradle.bookedbyTests [allureServe]" />
-        <item itemvalue="Gradle.MainPageTests" />
       </list>
     </recent_temporary>
   </component>
@@ -431,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664730300443</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="add stability">
+      <created>1664732165812</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1664732165812</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
