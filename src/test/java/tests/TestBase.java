@@ -16,7 +16,7 @@ public class TestBase {
     static void configure() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         if (System.getProperty("selenide_remote") != null) {
-            Configuration.remote = System.getProperty("selenide_remote");
+            Configuration.remote = System.getProperty("remote");
         }
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
