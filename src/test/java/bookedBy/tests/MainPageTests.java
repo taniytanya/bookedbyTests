@@ -149,8 +149,7 @@ public class MainPageTests extends TestBase {
             open("https://www.bookedby.com/features");
         });
         step("Click button 'schedule a demo'", () -> {
-            $(byXpath(FormPage.buttonDemo)).
-                    shouldBe(Condition.and("clickable", visible, enabled));
+            $(byXpath(FormPage.buttonDemo)).shouldBe(Condition.and("clickable", visible, enabled));
             $(byXpath(FormPage.buttonDemo)).click();
         });
         step("Check form is opened", () -> {
