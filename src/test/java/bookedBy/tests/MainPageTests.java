@@ -19,6 +19,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class MainPageTests extends TestBase {
+
+
+
     @Test
     @DisplayName("Page should have main text")
     @Owner("Tanya")
@@ -30,7 +33,6 @@ public class MainPageTests extends TestBase {
     public void checkTitleTest() {
 
         step("Open main page", () -> {
-
             open("https://www.bookedby.com");
         });
         step("Check information", () -> {
@@ -56,7 +58,7 @@ public class MainPageTests extends TestBase {
             open("https://www.bookedby.com");
         });
         step("Click button 'learn more'", () -> {
-            $(".tn-elem__1306442671569498562442").click();
+            $(FormPage.learnMore).click();
         });
         step("Page with features is opened", () -> {
             webdriver().shouldHave(url("https://www.bookedby.com/features"));
@@ -113,7 +115,6 @@ public class MainPageTests extends TestBase {
 
 
         step("Open features page", () -> {
-
             open("https://www.bookedby.com/features");
         });
         step("Open Psychologist features", () -> {
@@ -147,11 +148,8 @@ public class MainPageTests extends TestBase {
         step("Open features page", () -> {
             open("https://www.bookedby.com/features");
         });
-
-        $(byXpath(FormPage.buttonDemo)).
-                shouldBe(Condition.and("clickable", visible, enabled));
-
         step("Click button 'schedule a demo'", () -> {
+            $(byXpath(FormPage.buttonDemo)).shouldBe(Condition.and("clickable", visible, enabled));
             $(byXpath(FormPage.buttonDemo)).click();
         });
         step("Check form is opened", () -> {

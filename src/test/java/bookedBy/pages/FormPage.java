@@ -18,4 +18,5 @@ public class FormPage {
     public static String formSalonNameField = "//*[@id=\"form130869567\"]//*[@name=\"Salon Name\"]";
     public static String formInputField = "//*[@id=\"form130869567\"]//*[@name=\"Input\"]";
     public static String formPhoneField = "//*[@id=\"form130869567\"]//*[@name=\"Phone\"]";
+    public static  String learnMore = ".tn-elem__1306442671569498562442";
 }
