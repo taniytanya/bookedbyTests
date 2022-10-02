@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f3ada63-3495-4788-bfcc-a74d41ce817c" name="Changes" comment="add">
-      <change beforePath="$PROJECT_DIR$/src/test/java/bookedBy/tests/MainPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bookedBy/tests/MainPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +108,7 @@
       <command value="gradle all_test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.MainPageTests.checkGetADemoFormIsOpenedTest">
+  <component name="RunManager" selected="Gradle.MainPageTests (1)">
     <configuration name="MainPageTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -222,7 +222,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="bookedbyTests [allureServe]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="bookedbyTests [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -233,7 +233,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="allureServe" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -248,15 +248,15 @@
       <item itemvalue="Gradle.MainPageTests.checkGetADemoFormIsOpenedTest" />
       <item itemvalue="Gradle.MainPageTests.checkPsychologistFeaturesTest" />
       <item itemvalue="Gradle.MainPageTests.checkSubmitIsNotAvailableWithIncorrectEmailTest" />
-      <item itemvalue="Gradle.bookedbyTests [allureServe]" />
+      <item itemvalue="Gradle.bookedbyTests [clean]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MainPageTests.checkGetADemoFormIsOpenedTest" />
         <item itemvalue="Gradle.MainPageTests (1)" />
+        <item itemvalue="Gradle.bookedbyTests [clean]" />
+        <item itemvalue="Gradle.MainPageTests.checkGetADemoFormIsOpenedTest" />
         <item itemvalue="Gradle.MainPageTests.checkPsychologistFeaturesTest" />
         <item itemvalue="Gradle.MainPageTests.checkSubmitIsNotAvailableWithIncorrectEmailTest" />
-        <item itemvalue="Gradle.bookedbyTests [allureServe]" />
       </list>
     </recent_temporary>
   </component>
@@ -451,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664732763648</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="add">
+      <created>1664733154346</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1664733154346</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
