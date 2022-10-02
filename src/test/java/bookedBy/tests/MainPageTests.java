@@ -27,13 +27,13 @@ public class MainPageTests extends TestBase {
     @Owner("Tanya")
     @Story("Main page is working")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "Testing", url = "https://www.bookedby.com")
+    @Link(value = "Testing", url = "https://www.bookedby.com/")
     @Tag("all")
     @Tag("smoke")
     public void checkTitleTest() {
 
         step("Open main page", () -> {
-            open("https://www.bookedby.com");
+            open("https://www.bookedby.com/");
         });
         step("Check information", () -> {
             $(FormPage.titleInfo).shouldHave(text("Book services"));
@@ -48,20 +48,20 @@ public class MainPageTests extends TestBase {
     @Owner("Tanya")
     @Story("Main page is working")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "Testing", url = "https://www.bookedby.com")
+    @Link(value = "Testing", url = "https://www.bookedby.com/")
     @Tag("all")
     @Tag("smoke")
     public void featurePageIsOpenedTest() {
 
         step("Open main page", () -> {
 
-            open("https://www.bookedby.com");
+            open("https://www.bookedby.com/");
         });
         step("Click button 'learn more'", () -> {
             $(FormPage.learnMore).click();
         });
         step("Page with features is opened", () -> {
-            webdriver().shouldHave(url("https://www.bookedby.com/features"));
+            webdriver().shouldHave(url("https://www.bookedby.com/features/"));
         });
         step("Check filter fields", () -> {
             $(FormPage.filterFields).shouldHave(text("Salons"));
@@ -79,13 +79,13 @@ public class MainPageTests extends TestBase {
     @Owner("Tanya")
     @Story("Main page is working")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "Testing", url = "https://www.bookedby.com")
+    @Link(value = "Testing", url = "https://www.bookedby.com/")
     @Tag("all")
     public void checkCellPhonesFeaturesTest() {
 
 
         step("Open features page", () -> {
-            open("https://www.bookedby.com/features");
+            open("https://www.bookedby.com/features/");
         });
         step("Open Cell Phones features", () -> {
             $(byText("Cell Phones")).
@@ -93,7 +93,7 @@ public class MainPageTests extends TestBase {
             $(byText("Cell Phones")).click();
         });
         step("Page with Cell Phones features is opened", () -> {
-            webdriver().shouldHave(url("https://www.bookedby.com/features-cellphones"));
+            webdriver().shouldHave(url("https://www.bookedby.com/features-cellphones/"));
         });
         step("Check filter fields", () -> {
             $(FormPage.allrecords).shouldHave(text("Inventory Management"));
@@ -109,20 +109,20 @@ public class MainPageTests extends TestBase {
     @Owner("Tanya")
     @Story("Main page is working")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "Testing", url = "https://www.bookedby.com")
+    @Link(value = "Testing", url = "https://www.bookedby.com/")
     @Tag("all")
     public void checkPsychologistFeaturesTest() {
 
 
         step("Open features page", () -> {
-            open("https://www.bookedby.com/features");
+            open("https://www.bookedby.com/features/");
         });
         step("Open Psychologist features", () -> {
             $(FormPage.psychologist).shouldBe(Condition.and("clickable", visible, enabled));
             $(FormPage.psychologist).click();
         });
         step("Page with Psychologist features is opened", () -> {
-            webdriver().shouldHave(url("https://www.bookedby.com/features-psychologist"));
+            webdriver().shouldHave(url("https://www.bookedby.com/features-psychologist/"));
         });
         step("Check filter fields", () -> {
             $(FormPage.allrecords).shouldNotHave(text("Inventory Management"));
@@ -139,14 +139,14 @@ public class MainPageTests extends TestBase {
     @Owner("Tanya")
     @Story("Main page is working")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "Testing", url = "https://www.bookedby.com")
+    @Link(value = "Testing", url = "https://www.bookedby.com/")
     @Tag("all")
     @Tag("smoke")
     public void checkGetADemoFormIsOpenedTest() {
 
 
         step("Open features page", () -> {
-            open("https://www.bookedby.com/features");
+            open("https://www.bookedby.com/features/");
         });
         step("Click button 'schedule a demo'", () -> {
             $(byXpath(FormPage.buttonDemo)).shouldBe(Condition.and("clickable", visible, enabled));
@@ -163,13 +163,13 @@ public class MainPageTests extends TestBase {
     @Owner("Tanya")
     @Story("Main page is working")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "Testing", url = "https://www.bookedby.com")
+    @Link(value = "Testing", url = "https://www.bookedby.com/")
     @Tag("all")
     @Tag("smoke")
     public void checkSubmitIsNotAvailableWithoutALLRequiredFieldsOnDemoFormTest() {
 
         step("Open features page", () -> {
-            open("https://www.bookedby.com/features");
+            open("https://www.bookedby.com/features/");
         });
 
         $(byXpath(FormPage.buttonDemo)).
@@ -191,12 +191,12 @@ public class MainPageTests extends TestBase {
     @Owner("Tanya")
     @Story("Main page is working")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "Testing", url = "https://www.bookedby.com")
+    @Link(value = "Testing", url = "https://www.bookedby.com/")
     @Tag("all")
     public void checkSubmitIsNotAvailableWithoutPhoneOnDemoFormTest() {
 
         step("Open features page", () -> {
-            open("https://www.bookedby.com/features");
+            open("https://www.bookedby.com/features/");
         });
         step("Click button 'schedule a demo'", () -> {
             $(byXpath(FormPage.buttonDemo)).click();
@@ -226,12 +226,12 @@ public class MainPageTests extends TestBase {
     @Owner("Tanya")
     @Story("Main page is working")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "Testing", url = "https://www.bookedby.com")
+    @Link(value = "Testing", url = "https://www.bookedby.com/")
     @Tag("all")
     public void checkSubmitIsNotAvailableWithoutNameOnDemoFormTest() {
 
         step("Open features page", () -> {
-            open("https://www.bookedby.com/features");
+            open("https://www.bookedby.com/features/");
         });
         step("Click button 'schedule a demo'", () -> {
             $(byXpath(FormPage.buttonDemo)).click();
@@ -261,12 +261,12 @@ public class MainPageTests extends TestBase {
     @Owner("Tanya")
     @Story("Main page is working")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "Testing", url = "https://www.bookedby.com")
+    @Link(value = "Testing", url = "https://www.bookedby.com/")
     @Tag("all")
     public void checkSubmitIsNotAvailableWithoutEmailOnDemoFormTest() {
 
         step("Open features page", () -> {
-            open("https://www.bookedby.com/features");
+            open("https://www.bookedby.com/features/");
         });
         step("Click button 'schedule a demo'", () -> {
             $(byXpath(FormPage.buttonDemo)).click();
@@ -300,12 +300,12 @@ public class MainPageTests extends TestBase {
     @Owner("Tanya")
     @Story("Main page is working")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "Testing", url = "https://www.bookedby.com")
+    @Link(value = "Testing", url = "https://www.bookedby.com/")
     @Tag("all")
     public void checkSubmitIsNotAvailableWithIncorrectEmailTest() {
 
         step("Open features page", () -> {
-            open("https://www.bookedby.com/features");
+            open("https://www.bookedby.com/features/");
         });
         step("Click button 'schedule a demo'", () -> {
             $(byXpath(FormPage.buttonDemo)).

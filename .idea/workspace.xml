@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f3ada63-3495-4788-bfcc-a74d41ce817c" name="Changes" comment="add stability" />
+    <list default="true" id="7f3ada63-3495-4788-bfcc-a74d41ce817c" name="Changes" comment="add">
+      <change beforePath="$PROJECT_DIR$/src/test/java/bookedBy/tests/MainPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bookedBy/tests/MainPageTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -442,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664732669770</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add">
+      <created>1664732763648</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1664732763648</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -460,6 +469,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add tests" />
     <MESSAGE value="add stability" />
-    <option name="LAST_COMMIT_MESSAGE" value="add stability" />
+    <MESSAGE value="add" />
+    <option name="LAST_COMMIT_MESSAGE" value="add" />
   </component>
 </project>
