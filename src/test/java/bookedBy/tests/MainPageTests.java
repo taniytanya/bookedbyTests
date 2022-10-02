@@ -30,7 +30,6 @@ public class MainPageTests extends TestBase {
     public void checkTitleTest() {
 
         step("Open main page", () -> {
-
             open("https://www.bookedby.com");
         });
         step("Check information", () -> {
@@ -145,7 +144,9 @@ public class MainPageTests extends TestBase {
 
 
         step("Open features page", () -> {
-            open("https://www.bookedby.com/features");
+            open("https://www.bookedby.com");
+            $(".tn-elem__1306442671569498562442").click();
+
         });
 
         $(byXpath(FormPage.buttonDemo)).
