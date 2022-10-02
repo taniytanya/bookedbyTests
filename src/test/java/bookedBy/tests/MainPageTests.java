@@ -61,7 +61,7 @@ public class MainPageTests extends TestBase {
             $(FormPage.learnMore).click();
         });
         step("Page with features is opened", () -> {
-            webdriver().shouldHave(url("https://www.bookedby.com/features/"));
+            webdriver().shouldHave(url("https://www.bookedby.com/features"));
         });
         step("Check filter fields", () -> {
             $(FormPage.filterFields).shouldHave(text("Salons"));
@@ -93,7 +93,7 @@ public class MainPageTests extends TestBase {
             $(byText("Cell Phones")).click();
         });
         step("Page with Cell Phones features is opened", () -> {
-            webdriver().shouldHave(url("https://www.bookedby.com/features-cellphones/"));
+            webdriver().shouldHave(url("https://www.bookedby.com/features-cellphones"));
         });
         step("Check filter fields", () -> {
             $(FormPage.allrecords).shouldHave(text("Inventory Management"));
@@ -122,7 +122,7 @@ public class MainPageTests extends TestBase {
             $(FormPage.psychologist).click();
         });
         step("Page with Psychologist features is opened", () -> {
-            webdriver().shouldHave(url("https://www.bookedby.com/features-psychologist/"));
+            webdriver().shouldHave(url("https://www.bookedby.com/features-psychologist"));
         });
         step("Check filter fields", () -> {
             $(FormPage.allrecords).shouldNotHave(text("Inventory Management"));
