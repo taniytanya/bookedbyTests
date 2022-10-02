@@ -1,26 +1,24 @@
-package tests;
+package bookedBy.tests;
 
-
+import bookedBy.pages.FormPage;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.FormPage;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.*;
+import static com.codeborne.selenide.Condition.enabled;
+import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.url;
 import static io.qameta.allure.Allure.step;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class MainTests {
-
-
-
-
+public class MainPageTests extends TestBase {
     @Test
     @DisplayName("Page should have main text")
     @Owner("Tanya")
@@ -312,6 +310,8 @@ public class MainTests {
             open("https://www.bookedby.com/features");
         });
         step("Click button 'schedule a demo'", () -> {
+            $(byXpath(FormPage.buttonDemo)).
+                    shouldBe(Condition.and("clickable", visible, enabled));
             $(byXpath(FormPage.buttonDemo)).click();
         });
 
@@ -339,6 +339,4 @@ public class MainTests {
     public void afterEach() {
         closeWebDriver();
     }
-
-
 }

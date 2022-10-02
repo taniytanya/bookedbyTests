@@ -1,4 +1,4 @@
-package pages;
+package bookedBy.pages;
 
 public class FormPage {
 
