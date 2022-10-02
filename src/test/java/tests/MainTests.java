@@ -2,9 +2,7 @@ package tests;
 
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.*;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -38,9 +36,9 @@ public class MainTests {
             open("https://www.bookedby.com");
         });
         step("Check information", () -> {
-            $(FormPage.TITLE_INFO).shouldHave(text("Book services"));
-            $(FormPage.TITLE_INFO).shouldHave(text("from anywhere"));
-            $(FormPage.COVID_INFO).shouldHave(text("Information from BookedBy regarding Coronavirus (COVID-19)"));
+            $(FormPage.titleInfo).shouldHave(text("Book services"));
+            $(FormPage.titleInfo).shouldHave(text("from anywhere"));
+            $(FormPage.covidInfo).shouldHave(text("Information from BookedBy regarding Coronavirus (COVID-19)"));
         });
 
     }
@@ -66,12 +64,12 @@ public class MainTests {
             webdriver().shouldHave(url("https://www.bookedby.com/features"));
         });
         step("Check filter fields", () -> {
-            $(FormPage.FILTER_FIELDS).shouldHave(text("Salons"));
-            $(FormPage.FILTER_FIELDS).shouldHave(text("Cell Phones"));
-            $(FormPage.FILTER_FIELDS).shouldHave(text("Spas"));
-            $(FormPage.FILTER_FIELDS).shouldHave(text("Vets"));
-            $(FormPage.FILTER_FIELDS).shouldHave(text("Psychologist"));
-            $(FormPage.FILTER_FIELDS).shouldHave(text("Dentist"));
+            $(FormPage.filterFields).shouldHave(text("Salons"));
+            $(FormPage.filterFields).shouldHave(text("Cell Phones"));
+            $(FormPage.filterFields).shouldHave(text("Spas"));
+            $(FormPage.filterFields).shouldHave(text("Vets"));
+            $(FormPage.filterFields).shouldHave(text("Psychologist"));
+            $(FormPage.filterFields).shouldHave(text("Dentist"));
 
         });
     }
@@ -87,20 +85,21 @@ public class MainTests {
 
 
         step("Open features page", () -> {
-
             open("https://www.bookedby.com/features");
         });
         step("Open Cell Phones features", () -> {
+            $(byText("Cell Phones")).
+                    shouldBe(Condition.and("clickable", visible, enabled));
             $(byText("Cell Phones")).click();
         });
         step("Page with Cell Phones features is opened", () -> {
             webdriver().shouldHave(url("https://www.bookedby.com/features-cellphones"));
         });
         step("Check filter fields", () -> {
-            $(FormPage.ALLRECORDS).shouldHave(text("Inventory Management"));
-            $(FormPage.ALLRECORDS).shouldHave(text("Security"));
-            $(FormPage.ALLRECORDS).shouldHave(text("Sales / POS"));
-            $(FormPage.ALLRECORDS).shouldHave(text("Email Marketing"));
+            $(FormPage.allrecords).shouldHave(text("Inventory Management"));
+            $(FormPage.allrecords).shouldHave(text("Security"));
+            $(FormPage.allrecords).shouldHave(text("Sales / POS"));
+            $(FormPage.allrecords).shouldHave(text("Email Marketing"));
 
         });
     }
@@ -120,16 +119,17 @@ public class MainTests {
             open("https://www.bookedby.com/features");
         });
         step("Open Psychologist features", () -> {
-            $(FormPage.PSYCHOLOGIST).click();
+            $(FormPage.psychologist).shouldBe(Condition.and("clickable", visible, enabled));
+            $(FormPage.psychologist).click();
         });
         step("Page with Psychologist features is opened", () -> {
             webdriver().shouldHave(url("https://www.bookedby.com/features-psychologist"));
         });
         step("Check filter fields", () -> {
-            $(FormPage.ALLRECORDS).shouldNotHave(text("Inventory Management"));
-            $(FormPage.ALLRECORDS).shouldHave(text("Security"));
-            $(FormPage.ALLRECORDS).shouldHave(text("Sales / POS"));
-            $(FormPage.ALLRECORDS).shouldHave(text("Email Marketing"));
+            $(FormPage.allrecords).shouldNotHave(text("Inventory Management"));
+            $(FormPage.allrecords).shouldHave(text("Security"));
+            $(FormPage.allrecords).shouldHave(text("Sales / POS"));
+            $(FormPage.allrecords).shouldHave(text("Email Marketing"));
 
 
         });
@@ -150,15 +150,15 @@ public class MainTests {
             open("https://www.bookedby.com/features");
         });
 
-        $(byXpath(FormPage.BUTTON_DEMO)).
+        $(byXpath(FormPage.buttonDemo)).
                 shouldBe(Condition.and("clickable", visible, enabled));
 
         step("Click button 'schedule a demo'", () -> {
-            $(byXpath(FormPage.BUTTON_DEMO)).click();
+            $(byXpath(FormPage.buttonDemo)).click();
         });
         step("Check form is opened", () -> {
-            $(FormPage.DEMO_TITLE).shouldHave(text("Get a Demo"));
-            $(FormPage.DEMO_TEXT).shouldHave(text("Get to know our software"));
+            $(FormPage.demoTitle).shouldHave(text("Get a Demo"));
+            $(FormPage.demoText).shouldHave(text("Get to know our software"));
         });
     }
 
@@ -176,17 +176,17 @@ public class MainTests {
             open("https://www.bookedby.com/features");
         });
 
-        $(byXpath(FormPage.BUTTON_DEMO)).
+        $(byXpath(FormPage.buttonDemo)).
                 shouldBe(Condition.and("clickable", visible, enabled));
 
         step("Click button 'schedule a demo'", () -> {
-            $(byXpath(FormPage.BUTTON_DEMO)).click();
+            $(byXpath(FormPage.buttonDemo)).click();
         });
         step("Click submit", () -> {
-            $(FormPage.SUBMIT).click();
+            $(FormPage.submit).click();
         });
         step("Check error message", () -> {
-            $(FormPage.ERROR).isDisplayed();
+            $(FormPage.error).isDisplayed();
         });
     }
 
@@ -203,25 +203,25 @@ public class MainTests {
             open("https://www.bookedby.com/features");
         });
         step("Click button 'schedule a demo'", () -> {
-            $(byXpath(FormPage.BUTTON_DEMO)).click();
+            $(byXpath(FormPage.buttonDemo)).click();
         });
         step("input name on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_NAME_FIELD)).setValue("Rick Morty");
+            $(byXpath(FormPage.formNameField)).setValue("Rick Morty");
         });
         step("input email on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_EMAIL_FIELD)).setValue("RickMorty10987443@mail.com");
+            $(byXpath(FormPage.formEmailField)).setValue("RickMorty10987443@mail.com");
         });
         step("input business name on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_SALON_NAME_FIELD)).setValue("RickMorty10987443@mail.com");
+            $(byXpath(FormPage.formSalonNameField)).setValue("RickMorty10987443@mail.com");
         });
         step("input current software on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_INPUT_FIELD)).setValue("10 times ago");
+            $(byXpath(FormPage.formInputField)).setValue("10 times ago");
         });
         step("Click submit", () -> {
-            $(FormPage.SUBMIT).click();
+            $(FormPage.submit).click();
         });
         step("Check error message", () -> {
-            $(FormPage.ERROR).isDisplayed();
+            $(FormPage.error).isDisplayed();
         });
     }
 
@@ -238,25 +238,25 @@ public class MainTests {
             open("https://www.bookedby.com/features");
         });
         step("Click button 'schedule a demo'", () -> {
-            $(byXpath(FormPage.BUTTON_DEMO)).click();
+            $(byXpath(FormPage.buttonDemo)).click();
         });
         step("input Phone on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_PHONE_FIELD)).setValue("1234567890");
+            $(byXpath(FormPage.formPhoneField)).setValue("1234567890");
         });
         step("input name on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_EMAIL_FIELD)).setValue("RickMorty10987443@mail.com");
+            $(byXpath(FormPage.formEmailField)).setValue("RickMorty10987443@mail.com");
         });
         step("input business name on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_SALON_NAME_FIELD)).setValue("RickHair");
+            $(byXpath(FormPage.formSalonNameField)).setValue("RickHair");
         });
         step("input current software on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_INPUT_FIELD)).setValue("10 times ago");
+            $(byXpath(FormPage.formInputField)).setValue("10 times ago");
         });
         step("Click submit", () -> {
-            $(FormPage.SUBMIT).click();
+            $(FormPage.submit).click();
         });
         step("Check error message", () -> {
-            $(FormPage.ERROR).isDisplayed();
+            $(FormPage.error).isDisplayed();
         });
     }
 
@@ -273,29 +273,29 @@ public class MainTests {
             open("https://www.bookedby.com/features");
         });
         step("Click button 'schedule a demo'", () -> {
-            $(byXpath(FormPage.BUTTON_DEMO)).click();
+            $(byXpath(FormPage.buttonDemo)).click();
         });
 
         $(byXpath("//*[@id=\"form130869567\"]//*[@name=\"Name\"]")).
                 shouldBe(Condition.and("clickable", visible, enabled));
 
         step("input name on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_NAME_FIELD)).setValue("Rick Morty");
+            $(byXpath(FormPage.formNameField)).setValue("Rick Morty");
         });
         step("input Phone on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_PHONE_FIELD)).setValue("1234567890");
+            $(byXpath(FormPage.formPhoneField)).setValue("1234567890");
         });
         step("input business name on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_SALON_NAME_FIELD)).setValue("RickHair");
+            $(byXpath(FormPage.formSalonNameField)).setValue("RickHair");
         });
         step("input current software on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_INPUT_FIELD)).setValue("10 times ago");
+            $(byXpath(FormPage.formInputField)).setValue("10 times ago");
         });
         step("Click submit", () -> {
-            $(FormPage.SUBMIT).click();
+            $(FormPage.submit).click();
         });
         step("Check error message", () -> {
-            $(FormPage.ERROR).isDisplayed();
+            $(FormPage.error).isDisplayed();
         });
     }
 
@@ -312,26 +312,26 @@ public class MainTests {
             open("https://www.bookedby.com/features");
         });
         step("Click button 'schedule a demo'", () -> {
-            $(byXpath(FormPage.BUTTON_DEMO)).click();
+            $(byXpath(FormPage.buttonDemo)).click();
         });
 
-        $(byXpath(FormPage.FORM_NAME_FIELD)).
+        $(byXpath(FormPage.formNameField)).
                 shouldBe(Condition.and("clickable", visible, enabled));
 
         step("input name on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_NAME_FIELD)).setValue("Rick Morty");
+            $(byXpath(FormPage.formNameField)).setValue("Rick Morty");
         });
         step("input Phone on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_PHONE_FIELD)).setValue("1234567890");
+            $(byXpath(FormPage.formPhoneField)).setValue("1234567890");
         });
         step("input business name on 'get a demo'", () -> {
-            $(byXpath(FormPage.FORM_EMAIL_FIELD)).setValue("RickHair");
+            $(byXpath(FormPage.formEmailField)).setValue("RickHair");
         });
         step("Click submit", () -> {
-            $(FormPage.SUBMIT).click();
+            $(FormPage.submit).click();
         });
         step("Check error message", () -> {
-            $(FormPage.ERROR).isDisplayed();
+            $(FormPage.error).isDisplayed();
         });
     }
 

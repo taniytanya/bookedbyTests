@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f3ada63-3495-4788-bfcc-a74d41ce817c" name="Changes" comment="add stability">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config/CredentialsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config/credentials.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/allure-notifications-4.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notifications/telegram.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/FormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/FormPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MainTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MainTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/CredentialsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/CredentialsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/credentials.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/credentials.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,12 +87,16 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/ktntt/IdeaProjects/bookedbyTests",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ktntt\IdeaProjects\bookedbyTests" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="tests" />
     </key>
@@ -99,7 +106,7 @@
       <command value="gradle all_test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.bookedbyTests [clean]">
+  <component name="RunManager" selected="Gradle.MainTests">
     <configuration name="MainTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -121,7 +128,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainTests.checkSubmitIsNotAvailableWithoutNameOnDemoFormTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MainTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -132,9 +139,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
+            <option value=":all_test" />
             <option value="--tests" />
-            <option value="&quot;tests.MainTests.checkSubmitIsNotAvailableWithoutNameOnDemoFormTest&quot;" />
+            <option value="&quot;tests.MainTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -144,7 +151,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainTests.checkTitleMenuTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MainTests.checkCellPhonesFeaturesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -157,7 +164,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.MainTests.checkTitleMenuTest&quot;" />
+            <option value="&quot;tests.MainTests.checkCellPhonesFeaturesTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -210,19 +217,18 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.MainTests.checkSubmitIsNotAvailableWithoutNameOnDemoFormTest" />
-      <item itemvalue="Gradle.MainTests.checkTitleMenuTest" />
+      <item itemvalue="Gradle.MainTests.checkCellPhonesFeaturesTest" />
       <item itemvalue="Gradle.bookedbyTests [all_test]" />
       <item itemvalue="Gradle.bookedbyTests [clean]" />
       <item itemvalue="Gradle.MainTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MainTests" />
+        <item itemvalue="Gradle.MainTests.checkCellPhonesFeaturesTest" />
+        <item itemvalue="Gradle.MainTests" />
         <item itemvalue="Gradle.bookedbyTests [clean]" />
         <item itemvalue="Gradle.bookedbyTests [all_test]" />
-        <item itemvalue="Gradle.MainTests" />
-        <item itemvalue="Gradle.MainTests.checkSubmitIsNotAvailableWithoutNameOnDemoFormTest" />
-        <item itemvalue="Gradle.MainTests.checkTitleMenuTest" />
       </list>
     </recent_temporary>
   </component>
@@ -326,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664661574502</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add stability">
+      <created>1664663491241</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1664663491241</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
