@@ -24,7 +24,7 @@ public class TestBase {
         Configuration.baseUrl = "https://www.bookedby.com";
         Configuration.browser = System.getProperty("browser_name", "chrome");
         Configuration.browserSize = System.getProperty("browser_size", "1920x2000");
-        Configuration.browserVersion = System.getProperty("browser_version","100" );
+        Configuration.browserVersion = System.getProperty("browser_version","100.0" );
     }
     @BeforeEach
     public void beforeEach() {
