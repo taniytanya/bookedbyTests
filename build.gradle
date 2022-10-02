@@ -32,7 +32,6 @@ dependencies {
             'com.codeborne:selenide:6.5.0',
             'io.qameta.allure:allure-selenide:2.19.0',
             'org.aspectj:aspectjweaver:1.9.6',
-            'com.codeborne:selenide:6.6.6',
             'org.slf4j:slf4j-simple:1.7.29',
             "org.aeonbits.owner:owner:1.0.12",
             "org.assertj:assertj-core:3.19.0",
