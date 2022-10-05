@@ -100,9 +100,6 @@ public class MainPageTests extends TestBase {
             $(byXpath(FormPage.buttonDemo)).
                     shouldBe(Condition.and("clickable", visible, enabled));
             $(FormPage.allrecords).shouldHave(text("Inventory Management"));
-            $(FormPage.allrecords).shouldHave(text("Security"));
-            $(FormPage.allrecords).shouldHave(text("Sales / POS"));
-            $(FormPage.allrecords).shouldHave(text("Email Marketing"));
 
         });
     }
@@ -130,13 +127,7 @@ public class MainPageTests extends TestBase {
         step("Check filter fields", () -> {
             $(byXpath(FormPage.buttonDemo)).
                     shouldBe(Condition.and("clickable", visible, enabled));
-            $(FormPage.allrecords).shouldNotHave(text("Inventory Management"));
-            $(FormPage.allrecords).shouldHave(text("Security"));
-            $(FormPage.allrecords).shouldHave(text("Sales / POS"));
-            $(FormPage.allrecords).shouldHave(text("Email Marketing"));
-
-
-        });
+            $(FormPage.allrecords).shouldNotHave(text("Inventory Management"));        });
     }
 
     @Test
