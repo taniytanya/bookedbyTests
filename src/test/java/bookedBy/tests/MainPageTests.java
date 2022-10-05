@@ -95,7 +95,10 @@ public class MainPageTests extends TestBase {
         step("Page with Cell Phones features is opened", () -> {
             webdriver().shouldHave(url("https://www.bookedby.com/features-cellphones"));
         });
+
         step("Check filter fields", () -> {
+            $(byXpath(FormPage.buttonDemo)).
+                    shouldBe(Condition.and("clickable", visible, enabled));
             $(FormPage.allrecords).shouldHave(text("Inventory Management"));
             $(FormPage.allrecords).shouldHave(text("Security"));
             $(FormPage.allrecords).shouldHave(text("Sales / POS"));
@@ -125,6 +128,8 @@ public class MainPageTests extends TestBase {
             webdriver().shouldHave(url("https://www.bookedby.com/features-psychologist"));
         });
         step("Check filter fields", () -> {
+            $(byXpath(FormPage.buttonDemo)).
+                    shouldBe(Condition.and("clickable", visible, enabled));
             $(FormPage.allrecords).shouldNotHave(text("Inventory Management"));
             $(FormPage.allrecords).shouldHave(text("Security"));
             $(FormPage.allrecords).shouldHave(text("Sales / POS"));
