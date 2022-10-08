@@ -36,7 +36,7 @@ public class TestBase {
         AllureAttachments.addScreenshotAs("Last screenshot");
         AllureAttachments.addPageSource();
         AllureAttachments.addBrowserConsoleLogs();
-        AllureAttachments.addVideo(sessionId);
+        AllureAttachments.addVideo();
         Selenide.closeWebDriver();
     }
 
