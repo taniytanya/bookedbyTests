@@ -3,10 +3,10 @@
 
 - [Technology stack](#stack-technology-stack)
 - [Test run](#run-test-run)
-- [Сборка в Jenkins](#-сборка-в-jenkins)
-- [Пример Allure-отчета](#-пример-allure-отчета)
-- [Уведомления в Telegram с использованием бота](#-уведомления-в-telegram-с-использованием-бота)
-- [Видео примера запуска теста в Selenoid](#-видео-примера-запуска-теста-в-selenoid)
+- [Jenkins build](#img-width4-stylevertical-alignmiddle-titlejenkins-srcimageslogojenkinssvg-jenkins-job)
+- [Allure report](#img-width4-stylevertical-alignmiddle-titleallure-report-srcimageslogoallure_reportsvg-allure-report)
+- [Telegram notifications with bot](#img-width4-stylevertical-alignmiddle-titletelegram-srcimageslogotelegramsvg-telegram-notifications-with-bot)
+- [Video of running test with Selenoid](#img-width4-stylevertical-alignmiddle-titleselenoid-srcimageslogoselenoidsvg-video-of-running-test-with-selenoid)
 
 ## :stack: Technology stack
 
@@ -89,7 +89,7 @@ test
 <img title="Test Results in Alure" src="images/screenshots/allure-report.png>
 </p>
 
-### <img width="4%" style="vertical-align:middle" title="Telegram" src="images/logo/Telegram.svg"> Telegram notifications from bot
+## <img width="4%" style="vertical-align:middle" title="Telegram" src="images/logo/Telegram.svg"> Telegram notifications with bot
 
 After tests done telegram-bot  <code>Telegram</code>, automatically processes and sends a run report message.
 
@@ -98,7 +98,7 @@ After tests done telegram-bot  <code>Telegram</code>, automatically processes an
 <img width="70%" title="Telegram Notifications" src="images/screenshots/telegram.png">
 </p>
 
-### <img width="4%" style="vertical-align:middle" title="Selenoid" src="images/logo/Selenoid.svg"> Видео примера запуска теста в Selenoid
+## <img width="4%" style="vertical-align:middle" title="Selenoid" src="images/logo/Selenoid.svg"> Video of running test with Selenoid.
 
 Video example that you could find in each test result.
 <p align="center">
