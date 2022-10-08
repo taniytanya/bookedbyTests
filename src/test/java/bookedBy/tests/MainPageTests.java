@@ -326,8 +326,5 @@ public class MainPageTests extends TestBase {
         });
     }
 
-    @AfterEach
-    public void afterEach() {
-        closeWebDriver();
-    }
+
 }
