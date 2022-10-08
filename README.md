@@ -83,13 +83,13 @@ test
 <img title="Allure Overview" src="images/screenshots/allure-report.png">
 </p>
 
-### Result
+### Result test
 
 <p align="center">
-<img title="Results Allure" src="images/screenshots/allure_2.png>
+<img title="Allure Overview" src="images/screenshots/allure_2.png">
 </p>
 
-### Telegram notifications with bot
+## Telegram notifications with bot
 
 After tests done telegram-bot that automatically processes and sends a run report message.
 
