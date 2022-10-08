@@ -3,10 +3,7 @@ package bookedBy.tests;
 import bookedBy.pages.FormPage;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.*;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Condition.enabled;

@@ -1,0 +1,321 @@
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1664621724318)
++++ b/.idea/vcs.xml	(date 1664621724318)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+new file mode 100644
+--- /dev/null	(date 1664623876908)
++++ b/.idea/gradle.xml	(date 1664623876908)
+@@ -0,0 +1,18 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
++  <component name="GradleSettings">
++    <option name="linkedExternalProjectsSettings">
++      <GradleProjectSettings>
++        <option name="distributionType" value="DEFAULT_WRAPPED" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="gradleHome" value="$PROJECT_DIR$/../../../../Gradle" />
++        <option name="modules">
++          <set>
++            <option value="$PROJECT_DIR$" />
++          </set>
++        </option>
++      </GradleProjectSettings>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1664647897691)
++++ b/.idea/workspace.xml	(date 1664647897691)
+@@ -0,0 +1,246 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="7f3ada63-3495-4788-bfcc-a74d41ce817c" name="Changes" comment="add tests">
++      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MainTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MainTests.java" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="ExternalProjectsData">
++    <projectState path="$PROJECT_DIR$">
++      <ProjectState />
++    </projectState>
++  </component>
++  <component name="ExternalProjectsManager">
++    <system id="GRADLE">
++      <state>
++        <task path="$PROJECT_DIR$">
++          <activation />
++        </task>
++        <projects_view>
++          <tree_state>
++            <expand>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="bookedbyTests" type="f1a62948:ProjectNode" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="bookedbyTests" type="f1a62948:ProjectNode" />
++                <item name="Tasks" type="e4a08cd1:TasksNode" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="bookedbyTests" type="f1a62948:ProjectNode" />
++                <item name="Tasks" type="e4a08cd1:TasksNode" />
++                <item name="verification" type="c8890929:TasksNode$1" />
++              </path>
++            </expand>
++            <select />
++          </tree_state>
++        </projects_view>
++      </state>
++    </system>
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
++  <component name="ProjectId" id="2FWxcj0CRyOci5UJW6zZm0qDiYU" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
++  }
++}</component>
++  <component name="RecentsManager">
++    <key name="CopyClassDialog.RECENTS_KEY">
++      <recent name="tests" />
++    </key>
++  </component>
++  <component name="RunManager" selected="Gradle.MainTests (1)">
++    <configuration name="MainTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" value="" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value=":smoke_test" />
++            <option value="--tests" />
++            <option value="&quot;tests.MainTests&quot;" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
++    </configuration>
++    <configuration name="MainTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" value="" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value=":test" />
++            <option value="--tests" />
++            <option value="&quot;github.MainTests&quot;" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
++    </configuration>
++    <configuration name="MainTests.checkSubmitIsNotAvailableWithIncorrectEmailTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" value="" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value=":test" />
++            <option value="--tests" />
++            <option value="&quot;github.MainTests.checkSubmitIsNotAvailableWithIncorrectEmailTest&quot;" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
++    </configuration>
++    <configuration name="MainTests.checkSubmitIsNotAvailableWithoutALLRequiredFieldsOnDemoFormTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" value="" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value=":test" />
++            <option value="--tests" />
++            <option value="&quot;tests.MainTests.checkSubmitIsNotAvailableWithoutALLRequiredFieldsOnDemoFormTest&quot;" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
++    </configuration>
++    <configuration name="bookedbyTests [allureServe]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value="allureServe" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Gradle.MainTests (1)" />
++        <item itemvalue="Gradle.MainTests.checkSubmitIsNotAvailableWithoutALLRequiredFieldsOnDemoFormTest" />
++        <item itemvalue="Gradle.bookedbyTests [allureServe]" />
++        <item itemvalue="Gradle.MainTests" />
++        <item itemvalue="Gradle.MainTests.checkSubmitIsNotAvailableWithIncorrectEmailTest" />
++      </list>
++    </recent_temporary>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="7f3ada63-3495-4788-bfcc-a74d41ce817c" name="Changes" comment="" />
++      <created>1664621722442</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1664621722442</updated>
++    </task>
++    <task id="LOCAL-00001" summary="add tests">
++      <created>1664647181211</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1664647181211</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
++    <servers />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="add tests" />
++    <option name="LAST_COMMIT_MESSAGE" value="add tests" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1664621724309)
++++ b/.idea/misc.xml	(date 1664621724309)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
