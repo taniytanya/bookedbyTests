@@ -9,7 +9,6 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.junit5.AllureJunit5;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -28,7 +27,7 @@ public class TestBase {
     }
 
     @AfterAll
-    public void afterAll() {
+    static void afterAll() {
         String sessionId = DriverUtils.getSessionId();
 
         AllureAttachments.addScreenshotAs("Last screenshot");
