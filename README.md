@@ -1,14 +1,14 @@
 # Project for UI automated testing for bookedby.com
-## :pushpin: Contains:
+## Contains:
 
-- [Technology stack](#stack-technology-stack)
-- [Test run](#run-test-run)
-- [Jenkins build](#img-width4-stylevertical-alignmiddle-titlejenkins-srcimageslogojenkinssvg-jenkins-job)
-- [Allure report](#img-width4-stylevertical-alignmiddle-titleallure-report-srcimageslogoallure_reportsvg-allure-report)
-- [Telegram notifications with bot](#img-width4-stylevertical-alignmiddle-titletelegram-srcimageslogotelegramsvg-telegram-notifications-with-bot)
-- [Video of running test with Selenoid](#img-width4-stylevertical-alignmiddle-titleselenoid-srcimageslogoselenoidsvg-video-of-running-test-with-selenoid)
+- [Technology stack](#technology-stack)
+- [Test run](#test-run)
+- [Jenkins build](#jenkins-job)
+- [Allure report](#allure-report)
+- [Telegram notifications with bot](#telegram-notifications-with-bot)
+- [Video of running test with Selenoid](#video-of-running-test-with-selenoid)
 
-## :stack: Technology stack
+## Technology stack
 
 <p align="center">
 <img width="6%" title="IntelliJ IDEA" src="images/logo/Intelij_IDEA.svg">
@@ -35,7 +35,7 @@ Allure-report includes:
 * console logs;
 * autotest video.
 
-## :run: test run
+## Test run
 
 ### Local test run
 With default options
@@ -71,12 +71,12 @@ test
 * <code>TASK</code> – you can run all tests or only smoke tests.
 * <code>REMOTE_BROWSER_URL</code> - remote url.
 
-## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Jenkins job
+## Jenkins job
 <p align="center">
 <img title="Jenkins Build" src="images/screenshots/jenkins_1.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Allure Report" src="images/logo/Allure_Report.svg"> Allure report
+## Allure report
 ### Overview
 
 <p align="center">
@@ -86,21 +86,21 @@ test
 ### Result
 
 <p align="center">
-<img title="Test Results in Alure" src="images/screenshots/allure-report.png>
+<img title="Results Allure" src="images/screenshots/allure_2.png>
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Telegram" src="images/logo/Telegram.svg"> Telegram notifications with bot
+### Telegram notifications with bot
 
-After tests done telegram-bot  <code>Telegram</code>, automatically processes and sends a run report message.
+After tests done telegram-bot that automatically processes and sends a run report message.
 
 
 <p align="center">
 <img width="70%" title="Telegram Notifications" src="images/screenshots/telegram.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Selenoid" src="images/logo/Selenoid.svg"> Video of running test with Selenoid.
+## Video of running test with Selenoid.
 
 Video example that you could find in each test result.
 <p align="center">
-  <img title="Selenoid Video" src="images/gif/videoExample.gif">
+  <img title="Selenoid Video" src="images/gif/video.gif">
 </p>
