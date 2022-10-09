@@ -45,7 +45,8 @@ public class AllureAttachments {
     }
 
     public static URL getVideoUrl() {
-        String videoUrl = "http://nepneppen.keenetic.pro:8080/#/videos/" + getSessionId() + ".mp4";
+        String videoUrl = "http://nepneppen.keenetic.pro:8080/videos/" + getSessionId() + ".mp4";
+
 
         try {
             return new URL(videoUrl);
