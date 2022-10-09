@@ -45,7 +45,7 @@ public class Attach {
     }
 
     public static URL getVideoUrl() {
-        String videoUrl = "http://nepneppen.keenetic.pro:8080/video/" + getSessionId() + ".mp4";
+        String videoUrl = "https://selenoid.autotests.cloud/video/" + getSessionId() + ".mp4";
 
         try {
             return new URL(videoUrl);
